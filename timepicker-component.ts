@@ -1,8 +1,6 @@
 import {ControlValueAccessor, NgModel} from "angular2/common";
 import {Directive, ElementRef, Renderer, Input, AfterViewInit,Output,EventEmitter} from "angular2/core";
-import $ from "jquery";
-
-declare var jQuery:JQueryStatic;
+var $ = require("jquery");
 
 @Directive({
   selector: 'input.timepicker[ngControl],input.timepicker[ngFormControl],input.timepicker[ngModel]',
