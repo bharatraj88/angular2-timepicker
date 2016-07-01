@@ -1,0 +1,23 @@
+{
+  "name": "angular2-datepicker",
+  "version": "1.0.0",
+  "description": "A wrapper around jQuery time picker by : https://github.com/jonthornton/jquery-timepicker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bharatraj88/angular2-datepicker.git"
+  },
+  "keywords": [
+    "angular2",
+    "datepicker"
+  ],
+  "author": "Bharat Raj <bharatraj.arutla@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bharatraj88/angular2-datepicker/issues"
+  },
+  "homepage": "https://github.com/bharatraj88/angular2-datepicker#readme"
+}
