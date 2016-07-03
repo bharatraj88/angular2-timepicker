@@ -44,6 +44,8 @@ You can use ngModel bidings and also listen to events in angular2 way. The model
 
 
 **Options and Events:**
+
+
 Usage same as mentioned in https://github.com/jonthornton/jquery-timepicker.
 
 Changing the options handles the destroy and initialize of time picker component by itself with new options.
