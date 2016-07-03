@@ -30,14 +30,15 @@ You can use ngModel bidings and also listen to events in angular2 way. The model
 **Example||**
 
          <input type="text" [ngModel]="time" (changeTime)="doSomething();"
-      class="form-control timepicker" [ngClass]="custom-cls"             			      [options]="{disableTextInput: false,'timeFormat':'HH:mm',showDuration:false}"/>
+      class="form-control timepicker" [ngClass]="custom-cls"
+      [options]="{disableTextInput: false,'timeFormat':'HH:mm',showDuration:false}"/>
 
  
 
 
 
 
-Importing:
+**Importing**
 
     import {TimePickerComponent} from "angular2-timepicker/timepicker-component";
 
