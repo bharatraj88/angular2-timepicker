@@ -4,11 +4,47 @@
   "description": "A wrapper around jQuery time picker by : https://github.com/jonthornton/jquery-timepicker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "typings install",
+    "pretest": "rm -rf dist ; webpack",
+    "test": "webpack-dev-server"
   },
   "dependencies": {
-	"jquery": "^2.2.0",
-	"jquery-ui": "^1.10.5"
+    "jquery": "^2.2.0",
+	  "jquery-ui": "^1.10.5",
+    "timepicker" : "1.11.6"
+  },
+  "peerDependencies": {
+    "@angular/common": "2.1.1",
+    "@angular/http": "2.1.1",
+    "@angular/compiler": "2.1.1",
+    "@angular/core": "2.1.1",
+    "@angular/platform-browser": "2.1.1",
+    "@angular/platform-browser-dynamic": "2.1.1",
+    "@angular/forms" : "2.1.1"
+  },
+  "devDependencies": {
+    "@angular/common": "2.1.1",
+    "@angular/http": "2.1.1",
+    "@angular/compiler": "2.1.1",
+    "@angular/core": "2.1.1",
+    "@angular/platform-browser": "2.1.1",
+    "@angular/platform-browser-dynamic": "2.1.1",
+    "@angular/forms" : "2.1.1",
+    "reflect-metadata": "0.1.3",
+    "core-js": "2.4.1",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "0.6.26",
+    "es6-shim": "0.35.0",
+    "ts-loader": "0.8.2",
+    "raw-loader": "0.5.1",
+    "css-loader": "0.23.1",
+    "typescript": "1.8.10",
+    "typings": "0.7.12",
+    "webpack": "1.13.0",
+    "webpack-dev-server": "1.14.1",
+    "webpack-merge": "0.14.0",
+    "html-webpack-plugin": "2.9.0",
+    "extract-text-webpack-plugin": "1.0.1"
   },
   "repository": {
     "type": "git",

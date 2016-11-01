@@ -1,9 +1,15 @@
-import {ControlValueAccessor, NgModel} from "angular2/common";
-import {Directive, ElementRef, Renderer, Input, OnChanges,Output,EventEmitter} from "angular2/core";
+import { ControlValueAccessor,NgModel } from '@angular/forms';
+import { Directive,ElementRef,Renderer,
+          EventEmitter,Output,Input,OnChanges } from '@angular/core';
+
+
 var $ = require("jquery");
 
 
-export class TimepickerConfig{
+/**
+ * Acts as a private class
+ */
+class TimepickerConfig{
   //Override where the dropdown is appended.
   //Takes either a string to use as a selector, a function that gets passed the clicked input element as argument or a jquery object to use directly.
   appendTo : string = "body";
@@ -100,7 +106,7 @@ export class TimepickerConfig{
 })
 
 
-export class TimePickerComponent implements ControlValueAccessor,OnChanges {
+export class TimePicker implements ControlValueAccessor,OnChanges {
   @Input()
   options:TimepickerConfig;
 
@@ -123,28 +129,28 @@ export class TimePickerComponent implements ControlValueAccessor,OnChanges {
     // Unbinding if timepicker present
     el.timepicker('remove');
     el.timepicker(this.options);
-    el.on('changeTime', function (event) {
+    el.on('changeTime', function (event:Object) {
       self.onUpdate(event);
       self.changeTime.emit(event);
     });
-    el.on('timeFormatError', function (event) {
+    el.on('timeFormatError', function (event:Object) {
       self.timeFormatError.emit(event);
     });
-    el.on('hideTimepicker', function (event) {
+    el.on('hideTimepicker', function (event:Object) {
       self.hideTimepicker.emit(event);
     });
-    el.on('selectTime', function (event) {
+    el.on('selectTime', function (event:Object) {
       self.selectTime.emit(event);
     });
-    el.on('showTimepicker', function (event) {
+    el.on('showTimepicker', function (event:Object) {
       self.showTimepicker.emit(event);
     });
-    el.on('timeRangeError', function (event) {
+    el.on('timeRangeError', function (event:Object) {
       self.timeRangeError.emit(event);
     });
   }
 
-  onChange = (_) => {
+  onChange = (_:any) => {
   };
 
   onTouched = () => {

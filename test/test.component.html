@@ -1,0 +1,5 @@
+<h2> Time Picker Example</h2>
+
+<input type="text" class="timepicker" [(ngModel)]="time" [options]="{disableTextInput: false,'timeFormat': 'h:i A',showDuration: false}">
+
+<span *ngIf="time">Selected Value is {{time}}</span>
