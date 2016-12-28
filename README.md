@@ -9,7 +9,7 @@ https://github.com/jonthornton/jquery-timepicker
 
 **Requirements:**
 
-1. Angular2 version> beta.12
+1. Angular2 version 2.1.1
 2. Typescript version>1.8
 3. jQuery version> 1.7
 
